@@ -1,4 +1,4 @@
-package com.cos.springboot.model;
+package com.cos.springboot.model.post;
 
 import java.sql.Timestamp;
 
