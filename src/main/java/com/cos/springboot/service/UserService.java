@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.cos.springboot.model.RespCode;
+import com.cos.springboot.model.ReturnCode;
+import com.cos.springboot.model.user.User;
 import com.cos.springboot.model.user.dto.ReqJoinDto;
+import com.cos.springboot.model.user.dto.ReqLoginDto;
 import com.cos.springboot.repository.UserRepository;
 
 @Service      //IoC 해준다.
@@ -22,7 +24,7 @@ public class UserService {
 			
 			
 			if(result == 1) {
-				return RespCode.아이디중복;				
+				return ReturnCode.아이디중복;				
 			
 			} else {
 				return userRepository.save(dto);
@@ -31,5 +33,10 @@ public class UserService {
 		} catch (Exception e) {
 			throw new RuntimeException();
 		}
+	}
+	
+	public User 로그인(ReqLoginDto reqLoginDto) {
+			
+		return userRepository.findByUsernameAndPassword(reqLoginDto);
 	}
 }
