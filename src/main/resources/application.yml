@@ -15,11 +15,13 @@ spring:
     password: bitc5600
     driver-class-name: com.mysql.cj.jdbc.Driver
     
-    servlet:
+  servlet:
     multipart:
       enabled: true
       max-file-size: 1MB
 
+
 file:
   path: C:/src/springbootWork/springboot-blog/media/
+# 쌤이 커스텀으로 만들어 둔거다 나중에 value 값을 가지고 오면 된다.
       
