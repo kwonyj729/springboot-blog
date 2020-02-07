@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cos.springboot.model.user.User;
 
+// release 가지 연습용
+
 @Controller
 public class PostController {
 	
